@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activilty_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activilty_vertical_margin"
+    tools:context=".MovieDetailsActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/black">
+
+        <ImageView
+
+            android:id="@+id/img_poster_details"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            tools:src="@drawable/poster_spiderman"
+            android:contentDescription="TODO" />
+
+    </FrameLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_title_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="@string/title_movies" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="right"
+                        android:text="@string/release_on"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_release_date_details"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        tools:text="@string/release_date" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_description_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="@string/default_desc" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
